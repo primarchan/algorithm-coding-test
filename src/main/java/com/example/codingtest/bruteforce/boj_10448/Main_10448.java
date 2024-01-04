@@ -1,4 +1,4 @@
-package com.example.codingtest.bruteforce;
+package com.example.codingtest.bruteforce.boj_10448;
 
 import java.util.Scanner;
 

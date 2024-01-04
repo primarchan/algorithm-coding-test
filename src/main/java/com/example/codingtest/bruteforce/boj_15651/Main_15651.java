@@ -1,4 +1,4 @@
-package com.example.codingtest.bruteforce;
+package com.example.codingtest.bruteforce.boj_15651;
 
 import java.io.*;
 import java.util.*;
