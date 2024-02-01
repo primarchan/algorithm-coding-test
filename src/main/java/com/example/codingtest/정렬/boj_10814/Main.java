@@ -1,4 +1,4 @@
-package com.example.codingtest.정렬.bol_10814;
+package com.example.codingtest.정렬.boj_10814;
 
 import java.util.Arrays;
 import java.util.Scanner;
