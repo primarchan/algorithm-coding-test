@@ -22,7 +22,7 @@ public class Solution {
             if (!results.containsKey(key)) {
                 results.put(key, new ArrayList<>());
             }
-            // 킹에 해당하는 리스트에 추가
+            // 키에 해당하는 리스트에 추가
             results.get(key).add(s);
         }
 
