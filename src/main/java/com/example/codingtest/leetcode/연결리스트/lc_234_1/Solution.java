@@ -1,4 +1,4 @@
-package com.example.codingtest.leetcode.연결리스트.lc_234;
+package com.example.codingtest.leetcode.연결리스트.lc_234_1;
 
 
 import java.util.Deque;
