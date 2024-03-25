@@ -1,4 +1,4 @@
-package com.example.codingtest.leetcode.데크.lc_23;
+package com.example.codingtest.leetcode.데크.lc_641;
 
 /**
  * https://leetcode.com/problems/design-circular-deque
