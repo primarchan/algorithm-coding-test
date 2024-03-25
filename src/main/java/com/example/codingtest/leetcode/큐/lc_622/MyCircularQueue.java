@@ -5,63 +5,63 @@ package com.example.codingtest.leetcode.큐.lc_622;
  */
 
 public class MyCircularQueue {
-    private int capacity; // Queue 의 최대용량
-    private int size; // 실제 Queue 에 담긴 element 들의 갯수
-    private int head; // 현재 head 의 위치
-    private int tail; // 현재 tail 의 위치
-    private int[] elements; // elements 배열 (이 문제에서 int queue 를 정의해서 int array 선언)
+    int[] q;
+    int front = 0, rear = -1, len = 0;
 
-    public MyCircularQueue(int k) { // 생성자
-        this.capacity = k;
-        this.size = 0;
-        this.head = 0;
-        this.tail = 0;
-        this.elements = new int[k];
+    public MyCircularQueue(int k) {
+        // k 크기의 원형 큐로 사용할 배열 선언
+        this.q = new int[k];
     }
 
     public boolean enQueue(int value) {
-        if (isFull()) { // 만약 Queue 가 꽉찬 상태라면 더 이상 넣을 수 없음
+        // 꽉 차 있지 않다면 진행하지 않음
+        if (this.isFull()) {
             return false;
         }
-        elements[tail] = value; // 현재 tail 의 위치에 value 를 삽입
-        tail = (tail + 1) % capacity; // tail 의 인덱스를 한칸 뒤로 밈
-        size++; // Queue 에 1개 추가되었다는 의미
+        // rear 포인터 한 칸 앞으로 이동, 최대 크기를 초과하면 나머지 위치로 이동
+        this.rear = (this.rear + 1) % this.q.length;
+
+        // rear 위치에 값 삽입
+        this.q[rear] = value;
+
+        // 현재 큐의 크기 계산
+        this.len++;
+
         return true;
     }
 
     public boolean deQueue() {
-        if (isEmpty()) { // 만약 Queue 가 빈 상태라면 꺼낼 수 없음
+        // 텅 비어 있다면 진행하지 않음
+        if (this.isEmpty()) {
             return false;
         }
 
-        // elements[head] = null; // primitive 가 아닐때 loitering 방지
-        head = (head + 1) % capacity; // head 의 인덱스를 한칸 뒤로 밈
-        size--; // Queue 에서 1개 제거되었다는 의미
+        // front 포인터 한 칸 앞으로 이동, 최대 크기를 초과하면 나머지 위치로 이동
+        this.front = (this.front + 1) % this.q.length;
+
+        // 현재 큐의 크기 계산
+        this.len--;
 
         return true;
     }
 
     public int Front() {
-        if (isEmpty()) { // Queue 가 빈 경우에 가져올 것이 없음
-            return -1; // 문제에서 -1로 명시되어 있음
-        }
-        return elements[head % capacity];
+        return (this.isEmpty()) ? -1 : this.q[this.front];
     }
 
     public int Rear() {
-        if (isEmpty()) { // Queue 가 빈 경우에 가져올 것이 없음
-            return -1;
-        }
-        // tail 이 0인 경우 elements[-1]을 탐색하게 되어 오류가 발생하는 것을 방지하기 위함
-        return elements[(tail + capacity - 1) % capacity];
+        // 맨 뒤에 값을 가져온다.
+        return (this.isEmpty()) ? -1 : this.q[this.rear];
     }
 
     public boolean isEmpty() {
-        return size == 0; // element 들의 실제 갯수를 의미하는 size 가 0이면 Queue 가 비었다고 할 수 있음
+        // 현재 큐의 크기가 0 이면 비어 있음
+        return this.len == 0 ;
     }
 
     public boolean isFull() {
-        return size == capacity; // size 와 선언시의 용량이 동일하다면 꽉 찼다고 할 수 있음
+        // 현재 큐의 크기가 전체 큐의 크기와 일치하면 꽉 차 있음
+        return this.len == this.q.length;
     }
 
 }
