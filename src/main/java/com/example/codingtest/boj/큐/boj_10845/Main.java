@@ -2,6 +2,7 @@ package com.example.codingtest.boj.큐.boj_10845;
 
 import java.io.*;
 import java.util.LinkedList;
+import java.util.NoSuchElementException;
 import java.util.Queue;
 
 public class Main {
@@ -33,6 +34,68 @@ public class Main {
         }
 
         bw.flush();
+    }
+
+}
+
+class MyQueue<E> {
+    private int size = 0;
+    private Node<E> frontNode = null;
+    private Node<E> rearNode = null;
+
+    public static class Node<E> {
+        E item;
+        Node<E> next;
+        Node(E element, Node<E> next) {
+            this.item = element;
+            this.next = next;
+        }
+
+    }
+
+    public void enqueue(E element) {
+        Node<E> newNode = new Node<>(element, null);
+
+        if (size == 0) {
+            frontNode = newNode;
+        }
+
+        rearNode.next = newNode;
+        rearNode = newNode;
+        size++;
+    }
+
+    public E dequeue() {
+        if (size == 0) {
+            throw new NoSuchElementException("Queue is Empty.");
+        }
+
+        E item = frontNode.item;;
+        frontNode = frontNode.next;
+
+        if (frontNode == null) {
+            rearNode = null;
+        }
+
+        size--;
+
+        return item;
+    }
+
+    public E getFront() {
+        return frontNode.item;
+    }
+
+    public E getRear() {
+        return rearNode.item;
+    }
+
+    public int size() {
+        return size;
+    }
+
+    public boolean isEmpty() {
+        return size == 0;
     }
 
 }
