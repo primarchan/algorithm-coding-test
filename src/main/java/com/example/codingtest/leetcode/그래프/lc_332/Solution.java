@@ -1,4 +1,4 @@
-package com.example.codingtest.leetcode.그래프.boj_332;
+package com.example.codingtest.leetcode.그래프.lc_332;
 
 import java.util.*;
 

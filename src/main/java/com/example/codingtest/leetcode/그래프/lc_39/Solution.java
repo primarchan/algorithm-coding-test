@@ -1,4 +1,4 @@
-package com.example.codingtest.leetcode.그래프.boj_39;
+package com.example.codingtest.leetcode.그래프.lc_39;
 
 import java.util.ArrayDeque;
 import java.util.ArrayList;
