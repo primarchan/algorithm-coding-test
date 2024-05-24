@@ -1,4 +1,4 @@
-package com.example.codingtest.boj.그래프.boj_1260;
+package com.example.codingtest.boj.그래프.boj_1260_1;
 
 import java.io.*;
 import java.util.*;
@@ -131,4 +131,5 @@ public class Main {
             return str;
         }
     }
+
 }
