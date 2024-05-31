@@ -1,5 +1,10 @@
 package com.example.codingtest.sample.배열.문제_01;
 
+/**
+ * 배열 정렬하기
+ * https://github.com/retrogemHK/codingtest_java/blob/main/solution/01.java
+ */
+
 import java.util.Arrays;
 import java.util.stream.IntStream;
 
