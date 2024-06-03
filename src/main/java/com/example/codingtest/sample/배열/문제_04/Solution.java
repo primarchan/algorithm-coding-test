@@ -1,7 +1,7 @@
 package com.example.codingtest.sample.배열.문제_04;
 
 /**
- * 두 개 뽑아서 더하기
+ * 모의고사
  * https://programmers.co.kr/learn/courses/30/lessons/42840
  * https://github.com/retrogemHK/codingtest_java/blob/main/solution/04.java
  *
