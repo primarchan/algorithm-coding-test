@@ -7,7 +7,7 @@ import java.util.Set;
 /**
  * 두 개 뽑아서 더하기
  * https://programmers.co.kr/learn/courses/30/lessons/68644
- * https://github.com/retrogemHK/codingtest_java/blob/main/solution/02.java
+ * https://github.com/retrogemHK/codingtest_java/blob/main/solution/03.java
  *
  * 정수 배열 numbers 가 주어집니다.
  * numbers 에서 서로 다른 인덱스에 있는 2개의 수를 뽑아 더해 만들 수 있는 모든 수를
