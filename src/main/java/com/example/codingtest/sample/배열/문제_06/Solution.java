@@ -1,4 +1,4 @@
-package com.example.codingtest.sample.배열.문제_6;
+package com.example.codingtest.sample.배열.문제_06;
 /**
  * 실패율
  * https://programmers.co.kr/learn/courses/30/lessons/42889
@@ -26,10 +26,9 @@ package com.example.codingtest.sample.배열.문제_6;
  * 만약 실패율이 같은 스테이지가 있다면 작은 번호의 스테이지가 먼저 오도록 하면 된다.
  * 스테이지에 도달한 유저가 없는 경우 해당 스테이지의 실패율은 0 으로 정의한다.
  *
- * 시간복잡도 : O(NlogN)
+ * 시간복잡도 : O(M + NlogN)
  */
 
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
