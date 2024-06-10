@@ -34,7 +34,10 @@ public class Solution {
     public int solution(String dirs) {
         initLocation();
         int x = 5, y = 5;
-        HashSet<String> answer = new HashSet<>(); // 3. 겹치는 좌표는 1개로 처리하기 위함
+
+        // 3. 겹치는 좌표는 1개로 처리하기 위함
+        HashSet<String> answer = new HashSet<>();
+
         // 4. 주어진 명령어로 움직이면서 좌표 저장
         for (int i = 0; i < dirs.length(); i++) {
             int[] offset = location.get(dirs.charAt(i));
