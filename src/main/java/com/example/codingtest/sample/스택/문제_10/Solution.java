@@ -1,4 +1,4 @@
-package com.example.codingtest.sample.배열.문제_10;
+package com.example.codingtest.sample.스택.문제_10;
 
 import java.util.ArrayDeque;
 import java.util.HashMap;
