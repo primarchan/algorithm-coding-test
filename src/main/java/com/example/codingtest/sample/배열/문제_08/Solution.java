@@ -1,4 +1,4 @@
-package com.example.codingtest.sample.스택.문제_08;
+package com.example.codingtest.sample.배열.문제_08;
 
 /**
  * 올바른 괄호
