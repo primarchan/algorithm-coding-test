@@ -54,7 +54,8 @@ public class Solution {
 
             // 5. 인접한 이웃 노드들에 대해서
             for (int next : adjList[now]) {
-                if (!visited[next]) {
+                if (!visited[next]) { // 6. 방문하지 않은 인접한 노드인 경우
+                    // 7. 인접한 노드를 방문 처리함
                     queue.add(next);
                     visited[next] = true;
                 }
