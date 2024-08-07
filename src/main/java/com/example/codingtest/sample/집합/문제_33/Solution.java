@@ -6,7 +6,6 @@ import java.util.Arrays;
  * 섬 연결하기 (⭐⭐⭐)
  * https://programmers.co.kr/learn/courses/30/lessons/42861
  * https://github.com/retrogemHK/codingtest_java/blob/main/solution/33.java
- *
  * 시간복잡도 : O(NlogN)
  */
 
