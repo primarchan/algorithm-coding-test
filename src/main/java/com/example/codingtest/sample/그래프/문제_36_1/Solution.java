@@ -1,4 +1,4 @@
-package com.example.codingtest.sample.그래프.문제_36;
+package com.example.codingtest.sample.그래프.문제_36_1;
 
 import java.util.ArrayList;
 import java.util.Arrays;
