@@ -7,7 +7,6 @@ import java.util.ArrayList;
  * https://github.com/retrogemHK/codingtest_java/blob/main/solution/43.java
  * 시간복잡도 : O(N!)
  */
-
 public class Solution {
     // 1. 조합 결과를 담을 리스트
     private static ArrayList<ArrayList<Integer>> result;
